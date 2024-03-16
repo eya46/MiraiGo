@@ -507,8 +507,8 @@ func (c *QQClient) SendGroupPoke(groupCode, target int64) {
 	_, _ = c.sendAndWait(c.buildGroupPokePacket(groupCode, target))
 }
 
-func (c *QQClient) SendFriendPoke(target int64) {
-	_, _ = c.sendAndWait(c.buildFriendPokePacket(target))
+func (c *QQClient) SendFriendPoke(userCode, target int64) {
+	_, _ = c.sendAndWait(c.buildFriendPokePacket(userCode, target))
 }
 
 func (c *QQClient) ReloadGroupList() error {
