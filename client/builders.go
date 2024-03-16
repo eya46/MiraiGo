@@ -1144,8 +1144,8 @@ func (c *QQClient) buildGroupPokePacket(groupCode, target int64) (uint16, []byte
 // OidbSvc.0xed3
 func (c *QQClient) buildFriendPokePacket(userCode, target int64) (uint16, []byte) {
 	body := &oidb.DED3ReqBody{
-		ToUin:  userCode,
-		AioUin: target,
+		ToUin:  target,
+		AioUin: userCode,
 	}
 	b, _ := proto.Marshal(body)
 	payload := c.packOIDBPackage(3795, 1, b)
