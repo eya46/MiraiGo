@@ -3,7 +3,7 @@ package tlv
 import (
 	"crypto/md5"
 
-	"github.com/Mrs4s/MiraiGo/binary"
+	"github.com/eya46/MiraiGo/binary"
 )
 
 func T187(macAddress []byte) []byte {

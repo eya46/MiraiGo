@@ -3,8 +3,8 @@ package client
 import (
 	"github.com/pkg/errors"
 
-	"github.com/Mrs4s/MiraiGo/client/internal/network"
-	"github.com/Mrs4s/MiraiGo/client/pb/oidb"
+	"github.com/eya46/MiraiGo/client/internal/network"
+	"github.com/eya46/MiraiGo/client/pb/oidb"
 )
 
 func (c *QQClient) buildTranslatePacket(src, dst, text string) (uint16, []byte) {

@@ -3,9 +3,9 @@ package message
 import (
 	"fmt"
 
-	"github.com/Mrs4s/MiraiGo/client/pb/msg"
-	"github.com/Mrs4s/MiraiGo/internal/proto"
-	"github.com/Mrs4s/MiraiGo/utils"
+	"github.com/eya46/MiraiGo/client/pb/msg"
+	"github.com/eya46/MiraiGo/internal/proto"
+	"github.com/eya46/MiraiGo/utils"
 )
 
 type MarketFaceElement struct {

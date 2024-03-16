@@ -13,13 +13,13 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/Mrs4s/MiraiGo/binary"
-	"github.com/Mrs4s/MiraiGo/binary/jce"
-	"github.com/Mrs4s/MiraiGo/client/internal/network"
-	"github.com/Mrs4s/MiraiGo/client/pb/oidb"
-	"github.com/Mrs4s/MiraiGo/client/pb/profilecard"
-	"github.com/Mrs4s/MiraiGo/internal/proto"
-	"github.com/Mrs4s/MiraiGo/utils"
+	"github.com/eya46/MiraiGo/binary"
+	"github.com/eya46/MiraiGo/binary/jce"
+	"github.com/eya46/MiraiGo/client/internal/network"
+	"github.com/eya46/MiraiGo/client/pb/oidb"
+	"github.com/eya46/MiraiGo/client/pb/profilecard"
+	"github.com/eya46/MiraiGo/internal/proto"
+	"github.com/eya46/MiraiGo/utils"
 )
 
 type (
