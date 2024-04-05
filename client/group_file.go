@@ -93,13 +93,13 @@ func (c *QQClient) GetGroupFileSystem(groupCode int64) (fs *GroupFileSystem, err
 	return fs, nil
 }
 
-func (c *QQClient) GetGroupFileUrl(groupCode int64, fileId string, busId int32) string {
+func (c *QQClient) GetGroupFileUrl(groupCode int64, fileId string, busId int32, fname string) string {
 	i, err := c.sendAndWait(c.buildGroupFileDownloadReqPacket(groupCode, fileId, busId))
 	if err != nil {
 		return ""
 	}
 	url := i.(string)
-	url += fmt.Sprintf("?fname=%x", fileId)
+	url += fmt.Sprintf("?fname=%s", fname)
 	return url
 }
 
@@ -175,7 +175,7 @@ func (fs *GroupFileSystem) UploadFile(p, name, folderId string) error {
 }
 
 func (fs *GroupFileSystem) GetDownloadUrl(file *GroupFile) string {
-	return fs.client.GetGroupFileUrl(file.GroupCode, file.FileId, file.BusId)
+	return fs.client.GetGroupFileUrl(file.GroupCode, file.FileId, file.BusId, file.FileName)
 }
 
 func (fs *GroupFileSystem) CreateFolder(parentFolder, name string) error {
